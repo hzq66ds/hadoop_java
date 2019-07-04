@@ -20,13 +20,13 @@
             <version>4.12</version>
             <scope>test</scope>
         </dependency>
-        <dependency>
-            <groupId>org.apache.mrunit</groupId>
-            <artifactId>mrunit</artifactId>
-            <version>1.1.0</version>
-            <classifier>hadoop2</classifier>
-            <scope>test</scope>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.apache.mrunit</groupId>-->
+<!--            <artifactId>mrunit</artifactId>-->
+<!--            <version>1.1.0</version>-->
+<!--            <classifier>hadoop2</classifier>-->
+<!--            <scope>test</scope>-->
+<!--        </dependency>-->
     </dependencies>
     <build>
         <finalName>hadooptest</finalName>
@@ -58,7 +58,7 @@
             <plugin>
                 <artifactId>maven-dependency-plugin</artifactId>
                 <configuration>
-                    <outputDirectory>${basedir}/publish/lib</outputDirectory>  <!-- 依赖的jar包要保存到的目录，basedir表示项目根目录 -->
+                    <outputDirectory>${basedir}/lib</outputDirectory>  <!-- 依赖的jar包要保存到的目录，basedir表示项目根目录 -->
                     <excludeTransitive>false</excludeTransitive>
                     <stripVersion>true</stripVersion>
                 </configuration>
