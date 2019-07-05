@@ -19,72 +19,72 @@ public class WordCountmain {
     public static void main(String[] agrs){
         try {
             Job job = Job.getInstance();
-            //Éè¶¨MRµÄÈë¿Ú
+            //è®¾å®šMRçš„å…¥å£
             job.setJarByClass(WordCountmain.class);
 
             if ("1".equals(agrs[0])) {
-                //¼ÆËãµ¥´Ê×ÜÊı
-                //Éè¶¨jobµÄMapperºÍÊä³öÀàĞÍ
+                //è®¡ç®—å•è¯æ€»æ•°
+                //è®¾å®šjobçš„Mapperå’Œè¾“å‡ºç±»å‹
                 job.setMapperClass(MyMapper.class);
                 job.setMapOutputKeyClass(Text.class);
                 job.setMapOutputValueClass(IntWritable.class);
 
-                //Éè¶¨jobµÄReducerºÍÊä³öÀàĞÍ
+                //è®¾å®šjobçš„Reducerå’Œè¾“å‡ºç±»å‹
                 job.setReducerClass(MyReducer.class);
                 job.setOutputKeyClass(Text.class);
                 job.setOutputValueClass(IntWritable.class);
             }else if("2".equals(agrs[0])){
-                //½«ËùÓĞ×Ö·û´®È¥ÖØ£¬²¢½øĞĞÆ´½Ó
-                //Éè¶¨jobµÄMapperºÍÊä³öÀàĞÍ
+                //å°†æ‰€æœ‰å­—ç¬¦ä¸²å»é‡ï¼Œå¹¶è¿›è¡Œæ‹¼æ¥
+                //è®¾å®šjobçš„Mapperå’Œè¾“å‡ºç±»å‹
                 job.setMapperClass(MyMapper1.class);
                 job.setMapOutputKeyClass(IntWritable.class);
                 job.setMapOutputValueClass(Text.class);
 
-                //Éè¶¨jobµÄReducerºÍÊä³öÀàĞÍ
+                //è®¾å®šjobçš„Reducerå’Œè¾“å‡ºç±»å‹
                 job.setReducerClass(MyReducer1.class);
                 job.setOutputKeyClass(IntWritable.class);
                 job.setOutputValueClass(Text.class);
             }else if("3".equals(agrs[0])){
-                //¼ÆËã×Ü¹¤×Ê
-                //Éè¶¨jobµÄMapperºÍÊä³öÀàĞÍ
+                //è®¡ç®—æ€»å·¥èµ„
+                //è®¾å®šjobçš„Mapperå’Œè¾“å‡ºç±»å‹
                 job.setMapperClass(MyMapper2.class);
                 job.setMapOutputKeyClass(Text.class);
                 job.setMapOutputValueClass(IntWritable.class);
 
-                //Éè¶¨jobµÄReducerºÍÊä³öÀàĞÍ
+                //è®¾å®šjobçš„Reducerå’Œè¾“å‡ºç±»å‹
                 job.setReducerClass(MyReducer2.class);
                 job.setOutputKeyClass(Text.class);
                 job.setOutputValueClass(IntWritable.class);
             }else if("4".equals(agrs[0])){
-                //¼ÆËã¸÷²¿ÃÅµÄ×Ü¹¤×Ê
-                //Éè¶¨jobµÄMapperºÍÊä³öÀàĞÍ
+                //è®¡ç®—å„éƒ¨é—¨çš„æ€»å·¥èµ„
+                //è®¾å®šjobçš„Mapperå’Œè¾“å‡ºç±»å‹
                 job.setMapperClass(MyMapper3.class);
                 job.setMapOutputKeyClass(Text.class);
                 job.setMapOutputValueClass(IntWritable.class);
 
-                //Éè¶¨jobµÄReducerºÍÊä³öÀàĞÍ
+                //è®¾å®šjobçš„Reducerå’Œè¾“å‡ºç±»å‹
                 job.setReducerClass(MyReducer2.class);
                 job.setOutputKeyClass(Text.class);
                 job.setOutputValueClass(IntWritable.class);
             }else if("5".equals(agrs[0])){
-                //¼ÆËã¸÷²¿ÃÅµÄÆ½¾ù¹¤×Ê
-                //Éè¶¨jobµÄMapperºÍÊä³öÀàĞÍ
+                //è®¡ç®—å„éƒ¨é—¨çš„å¹³å‡å·¥èµ„
+                //è®¾å®šjobçš„Mapperå’Œè¾“å‡ºç±»å‹
                 job.setMapperClass(MyMapper3.class);
                 job.setMapOutputKeyClass(Text.class);
                 job.setMapOutputValueClass(IntWritable.class);
 
-                //Éè¶¨jobµÄReducerºÍÊä³öÀàĞÍ
+                //è®¾å®šjobçš„Reducerå’Œè¾“å‡ºç±»å‹
                 job.setReducerClass(MyReducer3.class);
                 job.setOutputKeyClass(Text.class);
                 job.setOutputValueClass(IntWritable.class);
             }else if("bean".equals(agrs[0])){
-                //¼ÆËã¸÷²¿ÃÅµÄÆ½¾ù¹¤×Ê
-                //Éè¶¨jobµÄMapperºÍÊä³öÀàĞÍ
+                //è®¡ç®—å„éƒ¨é—¨çš„å¹³å‡å·¥èµ„
+                //è®¾å®šjobçš„Mapperå’Œè¾“å‡ºç±»å‹
                 job.setMapperClass(MyMapper_bean.class);
                 job.setMapOutputKeyClass(Bean01.class);
                 job.setMapOutputValueClass(Bean01.class);
 
-                //Éè¶¨jobµÄReducerºÍÊä³öÀàĞÍ
+                //è®¾å®šjobçš„Reducerå’Œè¾“å‡ºç±»å‹
                 job.setReducerClass(MyReducer_bean.class);
                 job.setOutputKeyClass(Bean01.class);
                 job.setOutputValueClass(NullWritable.class);
@@ -93,13 +93,13 @@ public class WordCountmain {
                 job.setPartitionerClass(Bean01Partition.class);
                 job.setNumReduceTasks(3);
             }
-            //Éè¶¨Õû¸öÈÎÎñµÄHDFSµÄÊäÈëºÍÊä³ö
+            //è®¾å®šæ•´ä¸ªä»»åŠ¡çš„HDFSçš„è¾“å…¥å’Œè¾“å‡º
             FileInputFormat.setInputPaths(job, new Path(agrs[1]));
 //            FileInputFormat.setInputPaths(job,new Path("/user/root/input/test.txt"));
             FileOutputFormat.setOutputPath(job, new Path(agrs[2]+agrs[0]));
 //            FileOutputFormat.setOutputPath(job,new Path("/user/root/output1"));
 
-            //Ìá½»ÈÎÎñ
+            //æäº¤ä»»åŠ¡
             job.waitForCompletion(true);
         }catch (Exception e){
             e.printStackTrace();

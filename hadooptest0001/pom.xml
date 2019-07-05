@@ -12,7 +12,68 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>hadooptest0001</artifactId>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <hadoop.version>3.1.2</hadoop.version>
+        <hive.version>3.1.1</hive.version>
+        <hbase.version>2.1.4</hbase.version>
+    </properties>
+
     <dependencies>
+        <dependency>
+            <groupId>org.apache.hadoop</groupId>
+            <artifactId>hadoop-common</artifactId>
+            <version>${hadoop.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.hadoop</groupId>
+            <artifactId>hadoop-hdfs</artifactId>
+            <version>${hadoop.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.hadoop</groupId>
+            <artifactId>hadoop-client</artifactId>
+            <version>${hadoop.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.hadoop</groupId>
+            <artifactId>hadoop-mapreduce-examples</artifactId>
+            <version>${hadoop.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- hive client -->
+<!--        <dependency>-->
+<!--            <groupId>org.apache.hive</groupId>-->
+<!--            <artifactId>hive-jdbc</artifactId>-->
+<!--            <version>${hive.version}</version>-->
+<!--        </dependency>-->
+        <dependency>
+            <groupId>org.apache.hive</groupId>
+            <artifactId>hive-exec</artifactId>
+            <version>${hive.version}</version>
+        </dependency>
+
+        <!-- hbase client -->
+        <dependency>
+            <groupId>org.apache.hbase</groupId>
+            <artifactId>hbase-server</artifactId>
+            <version>${hbase.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.hbase</groupId>
+            <artifactId>hbase-client</artifactId>
+            <version>${hbase.version}</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.apache.hive/hive-hplsql -->
+        <dependency>
+            <groupId>org.apache.hive</groupId>
+            <artifactId>hive-hplsql</artifactId>
+            <version>3.1.1</version>
+        </dependency>
+
+
 
         <dependency>
             <groupId>junit</groupId>
@@ -20,13 +81,13 @@
             <version>4.12</version>
             <scope>test</scope>
         </dependency>
-<!--        <dependency>-->
-<!--            <groupId>org.apache.mrunit</groupId>-->
-<!--            <artifactId>mrunit</artifactId>-->
-<!--            <version>1.1.0</version>-->
-<!--            <classifier>hadoop2</classifier>-->
-<!--            <scope>test</scope>-->
-<!--        </dependency>-->
+        <dependency>
+            <groupId>org.apache.mrunit</groupId>
+            <artifactId>mrunit</artifactId>
+            <version>1.1.0</version>
+            <classifier>hadoop2</classifier>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
     <build>
         <finalName>hadooptest</finalName>
