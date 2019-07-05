@@ -3,7 +3,6 @@ package hive.jdbc;
 import java.sql.*;
 
 public class Demo1 {
-
 	public static void main(String[] args) throws SQLException {
 		try {
 			Class.forName("org.apache.hive.jdbc.HiveDriver");

@@ -7,11 +7,11 @@
         <groupId>hadooptest</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
-    <packaging>jar</packaging>
 
-    <modelVersion>4.0.0</modelVersion>
 
     <artifactId>hadooptest0001</artifactId>
+    <packaging>jar</packaging>
+    <modelVersion>4.0.0</modelVersion>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -44,11 +44,11 @@
         </dependency>
 
         <!-- hive client -->
-<!--        <dependency>-->
-<!--            <groupId>org.apache.hive</groupId>-->
-<!--            <artifactId>hive-jdbc</artifactId>-->
-<!--            <version>${hive.version}</version>-->
-<!--        </dependency>-->
+        <dependency>
+            <groupId>org.apache.hive</groupId>
+            <artifactId>hive-jdbc</artifactId>
+            <version>${hive.version}</version>
+        </dependency>
         <dependency>
             <groupId>org.apache.hive</groupId>
             <artifactId>hive-exec</artifactId>
@@ -72,8 +72,6 @@
             <artifactId>hive-hplsql</artifactId>
             <version>3.1.1</version>
         </dependency>
-
-
 
         <dependency>
             <groupId>junit</groupId>
