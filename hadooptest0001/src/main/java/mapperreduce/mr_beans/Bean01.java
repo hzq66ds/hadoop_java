@@ -23,16 +23,16 @@ public class Bean01 implements WritableComparable<Bean01> {
         }
     }
 
-    //×¢ÒâreadFieldsÓëwrite·½·¨µÄÊäÈëÓëÊä³öµÄË³Ğò
+    //æ³¨æ„readFieldsä¸writeæ–¹æ³•çš„è¾“å…¥ä¸è¾“å‡ºçš„é¡ºåº
     public void readFields(DataInput dataInput) throws IOException {
-        //·´ĞòÁĞ»¯£ºÊäÈë
+        //ååºåˆ—åŒ–ï¼šè¾“å…¥
         this.name = dataInput.readUTF();
         this.age = dataInput.readInt();
         this.depno = dataInput.readUTF();
     }
 
     public void write(DataOutput dataOutput) throws IOException {
-        //ĞòÁĞ»¯£ºÊä³ö
+        //åºåˆ—åŒ–ï¼šè¾“å‡º
         dataOutput.writeUTF(this.name);
         dataOutput.writeInt(this.age);
         dataOutput.writeUTF(this.depno);

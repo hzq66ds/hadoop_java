@@ -8,7 +8,7 @@ import org.apache.hadoop.mapreduce.Partitioner;
  */
 public class Bean01Partition extends Partitioner<Bean01,Bean01> {
 
-
+    @Override
     public int getPartition(Bean01 bean01, Bean01 bean012, int numPartition) {
         if (bean012.getAge()<=10){
             return 1%numPartition;
